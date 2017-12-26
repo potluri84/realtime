@@ -29,7 +29,7 @@ public class KafkaScheduledPush {
     @Autowired
     private Sender sender;
     
-    @Scheduled(fixedRate = 1000)
+    @Scheduled(fixedRate = 1000)//push 100 transactions per second
     public void sendKafkaEverySec() throws JSONException {
     	String topicName = env.getProperty("kafka.topic");
     	
